@@ -19,3 +19,5 @@ image_url = soup.find_all('img', limit=1)
 for image in image_url:
    print(image['src'])
 
+# trying to organize the data
+
