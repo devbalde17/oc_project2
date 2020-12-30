@@ -1,5 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
+import pandas as pd
+
 page = requests.get('http://books.toscrape.com/catalogue/10-day-green-smoothie-cleanse-lose-up-to-15-pounds-in-10-days_581/index.html')
 soup = BeautifulSoup(page.content, 'html.parser')
 
@@ -21,3 +23,8 @@ for image in image_url:
 
 # trying to organize the data
 
+data = {'Product_page': product_page_url, 'UPC': universal_ product_code, 'Title': title, 'Price_i_tax': price_including_tax,
+'Price_e_tax': price_excluding_tax, 'Number' : number_available, 'Product': product_description, 'Category': category, 'Rating': review_rating,
+'Image': image_url}
+
+df=pd.DataFrame(data=data)
