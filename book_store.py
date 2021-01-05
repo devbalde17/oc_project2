@@ -1,5 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
+<<<<<<< HEAD
 import pandas as pd
 import csv
 
@@ -63,6 +64,8 @@ for urls in product_url:
         'star':star,
         'image_url':image_url
             }
+    df = pd.DataFrame(book)
+    print(df)
  
 
       
@@ -76,7 +79,3 @@ for urls in product_url:
     
         
      
-
-
-
-
