@@ -55,16 +55,17 @@ for urls in product_url:
         img_url = 'http://books.toscrape.com/'+image['src']
         image_url = img_url.replace("../","")
 
-    
+# use a dictionary to get the information for one book
 
-    book = {
+    diet_book = {
         'product_page_url':product_page_url,
         'title':title,
         'product_description':product_description,
         'star':star,
         'image_url':image_url
             }
-    df = pd.DataFrame(book)
+    df = pd.DataFrame(diet_book)
+
     print(df)
  
 
